@@ -1,1 +1,107 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML with Animations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            background-color: #ff6f61;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-50px);
+            }
+        }
+
+        .rotating {
+            width: 80px;
+            height: 80px;
+            margin: 20px auto;
+            background-color: #6a89cc;
+            border-radius: 50%;
+            animation: rotate 3s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .fading {
+            width: 120px;
+            height: 120px;
+            margin: 20px auto;
+            background-color: #38ada9;
+            animation: fade 3s infinite;
+        }
+
+        @keyframes fade {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .sliding {
+            width: 200px;
+            height: 50px;
+            margin: 20px auto;
+            background-color: #f8c291;
+            animation: slide 4s infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Multiple Animations</h1>
+        <div class="box"></div>
+        <div class="rotating"></div>
+        <div class="fading"></div>
+        <div class="sliding"></div>
+    </div>
+</body>
+</html>
